@@ -1,0 +1,45 @@
+---
+title: Top Scratch Addons Suggestions
+pagination:
+    enabled: true
+---
+
+<h1>{{ page.title }}</h1>
+
+<div class="discord-message discord-message-inner discord-message-content discord-message-body">
+	<ol
+		start="{{ paginator.per_page | times: paginator.page | minus: paginator.per_page | plus: 1 }}"
+	>
+		{% for suggestion in paginator.posts %}
+		<li class="discord-message-markup">
+			<strong>{{ suggestion.votes.count }}</strong>
+			<img
+				src="{{ suggestion.votes.emoji.url }}?size=128"
+				alt="{{ suggestion.votes.emoji.name }}"
+				class="discord-custom-emoji"
+			/>
+			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer.name }}"
+				>{{ suggestion.title }}</a
+			>
+			by
+			<span class="discord-mention">@{{ suggestion.author }}</span>
+		</li>
+		{% endfor %}
+	</ol>
+	<p>
+		Page {{ paginator.page }}/{{ paginator.total_pages }} • {{ paginator.total_posts }}
+		suggestions
+	</p>
+	<span class="discord-message-markup">
+		{% if paginator.previous_page %}
+		<a
+			href="{{ paginator.previous_page_path | relative_url | replace: '/page1', '' }}"
+			class="chip"
+		>
+			Previous page
+		</a>
+		{% endif %} {% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | relative_url }}" class="chip"> Next page </a>
+		{% endif %}
+	</span>
+</div>

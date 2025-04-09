@@ -1,0 +1,34 @@
+title: Scratch Addons Suggestions
+description: Suggestions for Scratch Addons taken from the old community Discord server
+baseurl: "/suggestions/"
+url: "https://sa-community.github.io"
+twitter_username: scratchaddons
+github_username: sa-community
+
+plugins:
+    - jekyll-feed
+    - jekyll-paginate-v2
+
+collections:
+    suggestions:
+        output: true
+        permalink: /:name
+
+defaults:
+    - scope:
+          path: ""
+          type: "suggestions"
+      values:
+          layout: "suggestion"
+    - scope:
+          path: ""
+      values:
+          layout: "default"
+
+
+pagination:
+  enabled: true
+  collection: suggestions
+  per_page: 25
+  sort_field: 'votes'
+  sort_reverse: false

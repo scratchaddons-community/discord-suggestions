@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% assign answer = site.data.answers[page.answer] %}
+
+<h1><a href="{{ page.link }}" title="View on Discord">{{ page.title }}</a></h1>
+<div class="chip selected" title="{{ answer.description }}">
+	<img
+		src="{{ answer.emoji.url }}"
+		alt="{{ answer.emoji.name }}"
+		class="chip-emoji"
+		draggable="false"
+	/>
+	{{ page.answer }}
+</div>
+<div class="chip">
+	<img
+		src="{{ page.votes.emoji.url }}?size=32"
+		alt="{{ page.votes.emoji.name }}"
+		class="chip-emoji"
+		draggable="false"
+	/>
+	{{ page.votes.count }}
+</div>
+
+<div class="discord-messages">{{ content }}</div>
