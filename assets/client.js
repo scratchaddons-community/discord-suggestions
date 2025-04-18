@@ -1,4 +1,5 @@
 import twemoji from "https://cdn.jsdelivr.net/npm/@discordapp/twemoji@15.1.0/+esm";
+
 twemoji.parse(document.body, {
 	className: "discord-custom-emoji",
 	size: "svg",
