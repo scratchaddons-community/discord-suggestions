@@ -23,13 +23,13 @@ pagination:
 				alt="{{ suggestion.votes.emoji.name }}"
 				class="discord-custom-emoji"
 			/>
-			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}">
-				{{ suggestion.title }}
-			</a>
+			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
+				>{{ suggestion.title }}</a
+			>
 			by
-			<a href="{{ site.baseurl }}/author/{{suggestion.author.id}}" class="discord-mention">
-				@{{ suggestion.author.name }}
-			</a>
+			<a href="{{ site.baseurl }}/author/{{suggestion.author.id}}" class="discord-mention"
+				>@{{ suggestion.author.name }}</a
+			>
 		</li>
 		{% endfor %}
 	</ol>
