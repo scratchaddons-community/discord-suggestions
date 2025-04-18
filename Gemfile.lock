@@ -85,12 +85,13 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (= 2.6.7)
+  http_parser.rb (~> 0.6.0)
   jekyll (= 4.4.1)
   jekyll-paginate-v2 (= 3.0.0)
   wdm (= 0.2.0)
 
 RUBY VERSION
-   ruby 3.3.7p123
+   ruby 3.3.6p108
 
 BUNDLED WITH
    2.6.7
