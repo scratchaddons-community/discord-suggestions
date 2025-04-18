@@ -1,8 +1,1 @@
-{
-	"markdownlint.config": {
-		"default": false
-	},
-	"files.associations": {
-		"*.html": "markdown"
-	}
-}
+{ "markdownlint.config": { "default": false }, "files.associations": { "*.html": "markdown" } }
