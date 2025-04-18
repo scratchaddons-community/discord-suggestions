@@ -70,7 +70,7 @@
 	height: 40px;
 }
 
-.discord-message .discord-author-avatar:hover {
+.discord-message a.discord-author-avatar:hover {
 	transform: scale(1.1);
 }
 
@@ -81,7 +81,7 @@
 	height: 100%;
 }
 
-.discord-message .discord-author-avatar:hover img {
+.discord-message a.discord-author-avatar:hover img {
 	box-shadow: 0 0 20px 0 rgb(0 0 0 / 90%);
 }
 
