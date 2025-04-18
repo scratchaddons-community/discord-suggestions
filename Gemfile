@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby file: ".ruby-version"
-gem "bundler", "2.6.7"
+gem "bundler", "2.6.8"
 
 gem "jekyll", "4.4.1"
 
