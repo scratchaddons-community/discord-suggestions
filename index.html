@@ -1,11 +1,16 @@
 ---
-title: Top Scratch Addons Suggestions
+title: Top Suggestions
 pagination:
     enabled: true
+    collection: suggestions
+    sort_field: "votes:count"
+    sort_reverse: true
+    per_page: 100
+    sort_field: "votes:count"
+    sort_reverse: true
 ---
 
-<h1>{{ page.title }}</h1>
-
+<h1>Top Scratch Addons Suggestions</h1>
 <div class="discord-message discord-message-inner discord-message-content discord-message-body">
 	<ol
 		start="{{ paginator.per_page | times: paginator.page | minus: paginator.per_page | plus: 1 }}"
@@ -14,15 +19,17 @@ pagination:
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
-				src="{{ suggestion.votes.emoji.url }}?size=128"
+				src="{{ suggestion.votes.emoji.url }}"
 				alt="{{ suggestion.votes.emoji.name }}"
 				class="discord-custom-emoji"
 			/>
-			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer.name }}"
+			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
 				>{{ suggestion.title }}</a
 			>
 			by
-			<span class="discord-mention">@{{ suggestion.author }}</span>
+			<a href="{{ site.baseurl }}/author/{{suggestion.author.id}}" class="discord-mention"
+				>@{{ suggestion.author.name }}</a
+			>
 		</li>
 		{% endfor %}
 	</ol>
@@ -39,7 +46,7 @@ pagination:
 			Previous page
 		</a>
 		{% endif %} {% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | relative_url }}" class="chip"> Next page </a>
+		<a href="{{ paginator.next_page_path | relative_url }}" class="chip">Next page</a>
 		{% endif %}
 	</span>
 </div>

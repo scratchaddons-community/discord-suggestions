@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{{ page.title }}</title>
-		<link rel="stylesheet" href="/suggestions/assets/style.css" />
-		<link rel="stylesheet" href="/suggestions/assets/discord.css" />
-		<link rel="shortcut icon" href="/suggestions/assets/icon.png" />
+		<title>{{ page.title }} | {{ site.title }}</title>
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css" />
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/discord.css" />
+		<link
+			rel="shortcut icon"
+			href="https://cdn.discordapp.com/icons/806602307750985799/a_da1b0057b76fea84f8d468cbaafc1e2a.png"
+		/>
 	</head>
 	<body>
 		<nav>
-			<img src="/suggestions/assets/icon.png" class="nav-logo" title="Logo" />
-			<a href="{{ site.baseurl }}">{{ site.title }}</a>
+			<img
+				src="https://cdn.discordapp.com/icons/806602307750985799/a_da1b0057b76fea84f8d468cbaafc1e2a.gif"
+				class="nav-logo"
+				title="Logo"
+			/>
+			<a href="{{ site.baseurl }}/">{{ site.title }}</a>
 		</nav>
-
 		{{ content }}
 	</body>
 </html>

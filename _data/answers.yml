@@ -3,5 +3,53 @@ Good Idea:
         This is suitable to be added, *if someone codes it*. If nobody codes it, it will not be
         added.
     emoji:
-        url: https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44d.svg
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/1f44d.svg
         name: 👍
+In Development:
+    description:
+        Someone is currently working on this feature. It could be added in the next update, a later
+        update, or possibly even not at all if the addon has problems.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/1f9d1-200d-1f4bb.svg
+        name: 🧑‍💻
+Implemented:
+    description:
+        This feature already exists in browsers, vanilla Scratch, or SA. If you can't find it, it
+        might be part of the next SA update.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/2705.svg
+        name: ✅
+Incompatible:
+    description:
+        This would make projects break for people without SA or with the addon disabled. For
+        example, adding new blocks. The Scratch Team would not like projects that require you to
+        have SA.
+    emoji:
+        url: https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/master/images/icon.svg
+        name: ":scratch_addons:"
+Impractical:
+    description:
+        This would probably be too difficult or janky to add using the methods we know about.
+        Someone could put in effort to make it work, but it's not likely.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/1f629.svg
+        name: 😩
+Rejected:
+    description:
+        This is technically possible, but is not suitable to be added for some reason. For example,
+        it could be unethical or too niche.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/1f6ab.svg
+        name: 🚫
+Impossible:
+    description:
+        This feature would be impossible to implement for technical reasons. Scratch Addons can not
+        change the core workings of Scratch.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/1f62d.svg
+        name: 😭
+Unanswered:
+    description: This suggestion has not yet answered.
+    emoji:
+        url: https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/2753.svg
+        name: ❓

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<div class="discord-message discord-message-inner discord-message-content discord-message-body">
+	<ol>
+		{% for suggestion in site.suggestions %} {% if suggestion.author.id == page.id %}
+		<li class="discord-message-markup">
+			<strong>{{ suggestion.votes.count }}</strong>
+			<img
+				src="{{ suggestion.votes.emoji.url }}"
+				alt="{{ suggestion.votes.emoji.name }}"
+				class="discord-custom-emoji"
+			/>
+			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
+				>{{ suggestion.title }}</a
+			>
+		</li>
+		{% endif %} {% endfor %}
+	</ol>
+</div>
