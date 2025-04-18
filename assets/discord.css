@@ -38,12 +38,16 @@
 	word-wrap: break-word;
 	flex: 0 0 auto;
 	margin-top: 1.0625rem;
-	border-color: #eceeef;
+	border-radius: 10px;
 	color: #2e3338;
 }
 
 .discord-message:first-child:not(:only-child) {
 	border-bottom: 4px double currentColor;
+}
+
+.discord-message.selected:has(.discord-message-inner) {
+	background-color: rgba(6, 6, 7, 0.1);
 }
 
 .discord-message:has(.discord-message-inner):hover {

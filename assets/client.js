@@ -15,3 +15,5 @@ for (const spoiler of spoilers)
 			spoiler.classList.add("discord-spoiler--revealed");
 		}
 	});
+
+if (window.location.hash) document.querySelector(window.location.hash)?.classList.add("selected");
