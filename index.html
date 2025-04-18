@@ -6,8 +6,9 @@ pagination:
     sort_field: "votes:count"
     sort_reverse: true
     per_page: 100
-    sort_field: "votes:count"
-    sort_reverse: true
+    filters:
+        where_exp:
+            item, "item.answer !~ '^Implemented|Incompatible|Impractical|Rejected|Impossible$'"
 ---
 
 <h1>Top Scratch Addons Suggestions</h1>

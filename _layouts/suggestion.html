@@ -5,7 +5,13 @@ layout: default
 {% assign answer = site.data.answers[page.answer] %}
 
 <h1><a href="{{ page.link }}" title="View on Discord">{{ page.title }}</a></h1>
-<div class="chip selected" title="{{ answer.description }}">
+<a
+	href="https://github.com/sa-community/suggestions-archive/edit/main/_suggestions{{ page.id }}.html#L2C10-L2"
+	target="_blank"
+	rel="noreferrer"
+	class="chip selected"
+	title="{{ answer.description }}"
+>
 	<img
 		src="{{ answer.emoji.url }}"
 		alt="{{ answer.emoji.name }}"
@@ -13,7 +19,7 @@ layout: default
 		draggable="false"
 	/>
 	{{ page.answer }}
-</div>
+</a>
 <div class="chip">
 	<img
 		src="{{ page.votes.emoji.url }}"
