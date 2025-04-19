@@ -8,9 +8,14 @@ html {
 	--theme-color: #ff7b26;
 }
 body {
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 	margin-left: 10%;
+	background-color: #fcfcfc;
 	padding: 4rem 0 0.25rem;
 	width: min(80%, 1024px);
+	color: #222;
 }
 
 a {
@@ -50,6 +55,29 @@ h1 a:hover {
 	text-decoration: none;
 }
 
+.chip {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: baseline;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	background-color: #e3e5e8;
+	padding: 0 12px;
+	height: 32px;
+	color: #313338;
+	font-weight: 600;
+	font-size: 14px;
+}
+.chip.selected {
+	border-color: #5865f2;
+	background-color: #e7e9fd;
+}
+.chip .chip-emoji {
+	margin-right: 6px;
+	width: 14px;
+	height: 14px;
+}
+
 .author-info {
 	display: flex;
 	align-items: center;
@@ -65,6 +93,7 @@ h1 a:hover {
 	display: flex;
 	margin-left: auto;
 }
+
 .socials a {
 	margin: 5px;
 	height: 40px;
@@ -75,6 +104,32 @@ h1 a:hover {
 .socials path {
 	transition: fill 0.1s ease-out;
 }
+path.github {
+	fill: #000;
+}
 .socials a:not(:hover) path:first-child {
 	fill: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+	.chip {
+		background-color: #2e3238;
+		color: #dcddde;
+	}
+	.chip.selected {
+		border-color: #727efb;
+		background-color: #313363;
+	}
+
+	body {
+		background-color: #222;
+		color: #fff;
+	}
+
+	path.github {
+		fill: #fff;
+	}
+	.socials a:not(:hover) path:first-child {
+		fill: #aaa;
+	}
 }
