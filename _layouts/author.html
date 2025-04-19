@@ -6,8 +6,10 @@ layout: default
 reverse %}
 
 <div class="author-info">
-	<img class="avatar" src="{{ page.avatar }}" alt="{{ page.discord }}" />
-	<h1>{{ page.title }}</h1>
+	<div class="username">
+		<img class="avatar" src="{{ page.avatar }}" alt="{{ page.discord }}" />
+		<h1>{{ page.title }}</h1>
+	</div>
 	<div class="socials">
 		{% if page.github != "" %}
 		<a
