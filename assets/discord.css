@@ -25,21 +25,19 @@
 }
 
 /** messages */
-.discord-messages {
-	font-size: 16px;
-	line-height: 170%;
-}
-
 .discord-message {
 	display: flex;
 	position: relative;
 	flex-direction: column;
 	padding: 0 1em;
+	font-size: 16px;
+	line-height: 170%;
 	word-wrap: break-word;
 	flex: 0 0 auto;
 	margin-top: 1.0625rem;
 	border-radius: 10px;
 	color: #2e3338;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .discord-message:first-child:not(:only-child) {
@@ -203,7 +201,8 @@
 }
 
 .discord-message-markup code {
-	font-family: "Consolas", "Courier New", Courier, monospace;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+		"Lucida Sans Typewriter", Monaco, "Courier New", Courier, monospace;
 	white-space: break-spaces;
 }
 
