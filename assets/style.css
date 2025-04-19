@@ -95,10 +95,13 @@ h1 a:hover {
 }
 
 .socials a {
+	display: flex;
 	margin: 5px;
+	width: 55px;
 	height: 40px;
 }
 .socials svg {
+	margin: auto;
 	height: 100%;
 }
 .socials path {
