@@ -4,13 +4,17 @@
 	"private": true,
 	"homepage": "https://discord.gg/FPv957V6SD",
 	"scripts": {
-		"format": "prettier --write \"**\" \"!./{_suggestions,author}\" --ignore-unknown --cache"
+		"build": "bundle exec jekyll build",
+		"format": "prettier --write \"**\" \"!./{_suggestions,author}\" --ignore-unknown --cache",
+		"serve": "bundle exec jekyll serve"
 	},
 	"browserslist": [
-		"chrome 80",
-		"edge 80",
-		"opera 67",
-		"ff 86"
+		"chrome 96",
+		"edge 96",
+		"opera 82",
+		"firefox >= 109",
+		"chromeandroid >= 96",
+		"firefoxandroid >= 109"
 	],
 	"prettier": "@redguy12/prettier-config",
 	"devDependencies": {
