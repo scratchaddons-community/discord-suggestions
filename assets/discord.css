@@ -46,7 +46,7 @@
 	border-bottom: 4px double currentColor;
 }
 
-.discord-message.selected:has(.discord-message-inner) {
+.discord-message:target:has(.discord-message-inner) {
 	background-color: rgba(6, 6, 7, 0.1);
 }
 
@@ -225,11 +225,15 @@
 	color: transparent;
 }
 
+.discord-message-markup .discord-spoiler input {
+	display: none;
+}
+
 .discord-message-markup .discord-spoiler:hover {
 	background-color: rgba(185, 187, 190, 0.8);
 }
 
-.discord-message-markup .discord-spoiler--revealed {
+.discord-message-markup .discord-spoiler:has(> :checked) {
 	background-color: rgba(0, 0, 0, 0.1);
 	color: inherit;
 }
