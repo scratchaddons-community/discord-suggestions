@@ -201,8 +201,9 @@
 }
 
 .discord-message-markup code {
-	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
-		"Lucida Sans Typewriter", Monaco, "Courier New", Courier, monospace;
+	font-family:
+		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+		Monaco, "Courier New", Courier, monospace;
 	white-space: break-spaces;
 }
 
