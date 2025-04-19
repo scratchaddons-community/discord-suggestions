@@ -34,7 +34,6 @@
 .discord-message .discord-author-avatar img {
 	transition: transform 0.2s ease-in-out;
 	border-radius: 50%;
-	width: 100%;
 	height: 100%;
 }
 .discord-message a.discord-author-avatar:hover img {
