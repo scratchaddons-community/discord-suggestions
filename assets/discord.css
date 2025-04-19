@@ -150,14 +150,23 @@
 	color: transparent;
 	user-select: none;
 }
+.discord-message-markup .discord-spoiler:not(:has(> :checked)) * {
+	background-color: #b9bbbe;
+	pointer-events: none;
+	color: transparent;
+}
+.discord-message-markup .discord-spoiler:hover {
+	background-color: #c7c8ca;
+}
+.discord-message-markup .discord-spoiler:hover:not(:has(> :checked)) * {
+	background-color: #c7c8ca;
+	color: transparent;
+}
 .discord-message-markup .discord-spoiler input {
 	display: none;
 }
-.discord-message-markup .discord-spoiler:hover {
-	background-color: #b9bbbecc;
-}
 .discord-message-markup .discord-spoiler:has(> :checked) {
-	background-color: #0000001a;
+	background-color: #e2e2e2;
 	color: inherit;
 	user-select: all;
 }
@@ -248,8 +257,14 @@
 	.discord-message-markup .discord-spoiler {
 		background-color: #72767d;
 	}
+	.discord-message-markup .discord-spoiler:not(:has(> :checked)) * {
+		background-color: #72767d;
+	}
 	.discord-message-markup .discord-spoiler:hover {
-		background-color: #72767dcc;
+		background-color: #63656a;
+	}
+	.discord-message-markup .discord-spoiler:hover:not(:has(> :checked)) * {
+		background-color: #63656a;
 	}
 	.discord-message-markup .discord-spoiler:has(> :checked) {
 		background-color: #ffffff1a;
