@@ -8,12 +8,14 @@ html {
 	--theme-color: #ff7b26;
 }
 body {
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 	margin-left: 10%;
+	background-color: #fff;
 	padding: 4rem 0 0.25rem;
 	width: min(80%, 1024px);
-	background-color: #fff;
 	color: #333;
-	transition: background-color 0.3s ease, color 0.3s ease;
 }
 a {
 	color: var(--theme-color);
@@ -80,7 +82,7 @@ h1 a:hover {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--theme-color: #ff9249; 
+		--theme-color: #ff9249;
 	}
 	body {
 		background-color: #121212;
@@ -90,6 +92,6 @@ h1 a:hover {
 		color: var(--theme-color);
 	}
 	.socials a:not(:hover) path:first-child {
-		fill: #aaa; 
+		fill: #aaa;
 	}
 }
