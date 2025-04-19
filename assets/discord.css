@@ -1,11 +1,4 @@
 .discord-message {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	font-size: 16px;
-	line-height: 170%;
-	word-wrap: break-word;
-	flex: 0 0 auto;
 	margin-top: 1.0625rem;
 	color: #2e3338;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,14 +14,11 @@
 }
 .discord-message .discord-message-inner {
 	display: flex;
-	position: relative;
-	flex: 0 0 auto;
 	border-radius: 10px;
 	padding: 0 1em;
 }
 .discord-message .discord-message-content {
 	padding-top: 2px;
-	width: 100%;
 	line-height: 160%;
 }
 
@@ -55,7 +45,6 @@
 	display: inline-flex;
 	align-items: center;
 	margin-right: 0.25rem;
-	font-size: 16px;
 }
 .discord-message .discord-author-info .discord-author-username {
 	color: #23262a;
@@ -85,15 +74,9 @@
 	font-size: 12px;
 }
 
-.discord-message-body {
-	position: relative;
-	font-weight: 400;
-	word-break: break-word;
-}
 .discord-message .discord-message-markup {
 	line-height: 1.375rem;
 	word-wrap: break-word;
-	user-select: text;
 }
 .discord-message .discord-message-markup > :not(.chip) {
 	white-space: pre-wrap;
