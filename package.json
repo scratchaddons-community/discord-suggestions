@@ -9,10 +9,12 @@
 		"serve": "bundle exec jekyll serve"
 	},
 	"browserslist": [
-		"chrome 80",
-		"edge 80",
-		"opera 67",
-		"ff 86"
+		"chrome 96",
+		"edge 96",
+		"opera 82",
+		"firefox >= 109",
+		"chromeandroid >= 96",
+		"firefoxandroid >= 109"
 	],
 	"prettier": "@redguy12/prettier-config",
 	"devDependencies": {
