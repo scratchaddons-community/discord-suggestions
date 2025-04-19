@@ -1,90 +1,54 @@
-/** chip */
-.chip {
-	display: inline-flex;
-	align-items: center;
-	vertical-align: baseline;
-	border: 1px solid transparent;
-	border-radius: 20px;
-	background-color: hsl(216 9.8% 90%);
-	padding: 0 12px;
-	height: 32px;
-	color: rgb(49, 51, 56);
-	font-weight: 600;
-	font-size: 14px;
-}
-
-.chip.selected {
-	border-color: rgb(88, 101, 242);
-	background-color: rgb(231, 233, 253);
-}
-
-.chip .chip-emoji {
-	margin-right: 6px;
-	width: 14px;
-	height: 14px;
-}
-
-/** messages */
 .discord-message {
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	padding: 0 1em;
 	font-size: 16px;
 	line-height: 170%;
 	word-wrap: break-word;
 	flex: 0 0 auto;
 	margin-top: 1.0625rem;
-	border-radius: 10px;
 	color: #2e3338;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .discord-message:first-child:not(:only-child) {
 	border-bottom: 4px double currentColor;
 }
-
-.discord-message:target:has(.discord-message-inner) {
-	background-color: rgba(6, 6, 7, 0.1);
+.discord-message:has(.discord-message-inner):target {
+	background-color: #0606071a;
 }
-
 .discord-message:has(.discord-message-inner):hover {
-	background-color: rgba(6, 6, 7, 0.02);
+	background-color: #06060705;
 }
-
 .discord-message .discord-message-inner {
 	display: flex;
 	position: relative;
 	flex: 0 0 auto;
+	border-radius: 10px;
+	padding: 0 1em;
 }
-
 .discord-message .discord-message-content {
 	padding-top: 2px;
 	width: 100%;
 	line-height: 160%;
 }
 
-/** author */
 .discord-message .discord-author-avatar {
 	margin-top: 5px;
 	margin-right: 16px;
 	width: 40px;
 	height: 40px;
 }
-
 .discord-message a.discord-author-avatar:hover {
 	transform: scale(1.1);
 }
-
 .discord-message .discord-author-avatar img {
 	transition: transform 0.2s ease-in-out;
 	border-radius: 50%;
 	width: 100%;
 	height: 100%;
 }
-
 .discord-message a.discord-author-avatar:hover img {
-	box-shadow: 0 0 20px 0 rgb(0 0 0 / 90%);
+	box-shadow: 0 0 20px 0 #000000e6;
 }
 
 .discord-message .discord-author-info {
@@ -93,17 +57,14 @@
 	margin-right: 0.25rem;
 	font-size: 16px;
 }
-
 .discord-message .discord-author-info .discord-author-username {
 	color: #23262a;
 	font-weight: 500;
 	font-size: 1em;
 }
-
 .discord-message .discord-author-info:hover .discord-author-username {
 	text-decoration: underline currentColor;
 }
-
 .discord-message .discord-author-info .discord-application-tag {
 	display: flex;
 	align-items: center;
@@ -118,26 +79,22 @@
 	line-height: 100%;
 	text-transform: uppercase;
 }
-
 .discord-message .discord-message-timestamp {
 	margin-left: 3px;
 	color: #99aab5;
 	font-size: 12px;
 }
 
-/** content */
 .discord-message-body {
 	position: relative;
 	font-weight: 400;
 	word-break: break-word;
 }
-
 .discord-message .discord-message-markup {
 	line-height: 1.375rem;
 	word-wrap: break-word;
 	user-select: text;
 }
-
 .discord-message .discord-message-markup > :not(.chip) {
 	white-space: pre-wrap;
 }
@@ -147,27 +104,19 @@
 	font-weight: normal;
 	text-decoration: none;
 }
-
 .discord-message-markup a:hover {
 	text-decoration: underline;
 }
-
 .discord-message-markup strong {
 	font-weight: 700;
 }
-
 .discord-message-markup u {
-	text-decoration-line: underline;
-	text-decoration-style: solid;
-	text-decoration-color: rgb(220, 221, 222);
-	text-decoration-thickness: auto;
+	text-decoration: underline;
 }
-
 .discord-message-markup blockquote {
 	display: flex;
 	margin: 0;
 }
-
 .discord-message-markup blockquote::before {
 	margin: 0 12px 0 0;
 	border-radius: 4px;
@@ -179,38 +128,32 @@
 	font-weight: 400;
 	font-size: 0.9em;
 }
-
 .discord-message-markup pre {
 	display: block;
 	margin-top: 0.25em;
 	margin-bottom: 0.5rem;
 	border: 1px solid #202225;
 	border-radius: 4px;
-	border-radius: 4px;
-	background-color: #2f3136;
+	background: #fdf6e3;
 	padding: 0.5em;
-	color: #b9bbbe;
+	color: #586e75;
 	font-size: 0.875rem;
 }
-
 .discord-message-markup pre code {
 	display: block;
 	padding: unset;
 	overflow-x: auto;
 	white-space: pre-wrap;
 }
-
 .discord-message-markup code {
 	font-family:
 		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
 		Monaco, "Courier New", Courier, monospace;
 	white-space: break-spaces;
 }
-
 .discord-message-markup code::selection {
 	background-color: #53585b;
 }
-
 .discord-message-markup .discord-custom-emoji {
 	display: inline-block;
 	vertical-align: bottom;
@@ -218,50 +161,44 @@
 	height: 1.375rem;
 	object-fit: contain;
 }
-
 .discord-message-markup .discord-spoiler {
 	cursor: pointer;
 	background-color: #b9bbbe;
 	color: transparent;
+	user-select: none;
 }
-
 .discord-message-markup .discord-spoiler input {
 	display: none;
 }
-
 .discord-message-markup .discord-spoiler:hover {
-	background-color: rgba(185, 187, 190, 0.8);
+	background-color: #b9bbbecc;
 }
-
 .discord-message-markup .discord-spoiler:has(> :checked) {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: #0000001a;
 	color: inherit;
+	user-select: all;
 }
-
 .discord-message-markup .discord-time,
-.discord-message-markup code {
+.discord-message-markup > code {
 	border-radius: 3px;
 	background-color: #0000000f;
 	padding: 0 2px;
 }
-
 .discord-message-markup .discord-mention {
 	transition:
 		background-color 50ms ease-out,
 		color 50ms ease-out;
 	border-radius: 3px;
-	background-color: hsla(235, 85.6%, 64.7%, 0.15);
+	background-color: #5865f226;
 	padding: 0 2px;
 	color: #687dc6;
 	font-weight: 500;
 }
-
 .discord-message-markup .discord-mention:hover {
-	background-color: hsl(235, 85.6%, 64.7%);
-	color: #ffffff;
+	background-color: #5865f2;
+	color: #fff;
 }
 
-/** attachments */
 .discord-attachments {
 	display: grid;
 	grid-auto-flow: row;
@@ -273,18 +210,15 @@
 	min-height: 0;
 	text-indent: 0;
 }
-
 .discord-attachment {
 	display: flex;
 	align-self: start;
 	justify-self: start;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	color: #dcddde;
 	font-size: 0.9em;
 	line-height: 150%;
 }
-
 .discord-attachment .discord-image-wrapper {
 	display: block;
 	position: relative;
@@ -292,7 +226,6 @@
 	overflow: hidden;
 	user-select: text;
 }
-
 .discord-attachment .discord-image-wrapper img,
 .discord-attachment .discord-image-wrapper video {
 	max-width: 500px;
@@ -300,76 +233,50 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.chip {
-		background-color: hsl(216 9.8% 20%);
-		color: rgb(220, 221, 222);
-	}
-
-	.chip.selected {
-		border-color: rgb(114, 126, 251);
-		background-color: rgb(49, 51, 99);
-	}
-
 	.discord-message {
 		color: #dcddde;
 	}
-
-	.discord-message:target:has(.discord-message-inner) {
-		background-color: rgba(250, 250, 250, 0.05);
+	.discord-message:has(.discord-message-inner):target {
+		background-color: #fafafa0d;
 	}
-
 	.discord-message:has(.discord-message-inner):hover {
-		background-color: rgba(250, 250, 250, 0.03);
-	}
-
-	.discord-message .discord-author-info .discord-author-username {
-		color: #ffffff;
+		background-color: #fafafa08;
 	}
 
 	.discord-message a.discord-author-avatar:hover img {
-		box-shadow: 0 0 20px 0 rgb(255 255 255 / 30%);
+		box-shadow: 0 0 20px 0 #ffffff4d;
 	}
 
+	.discord-message .discord-author-info .discord-author-username {
+		color: #fff;
+	}
 	.discord-message .discord-message-timestamp {
 		color: #72767d;
-	}
-
-	.discord-message-markup a {
-		color: #00aff4;
-	}
-
-	.discord-message-markup u {
-		text-decoration-color: rgb(114, 118, 125);
 	}
 
 	.discord-message-markup blockquote::before {
 		background-color: #72767d;
 	}
-
 	.discord-message-markup pre {
-		border-color: #18191c;
+		border-color: #202225;
 		background-color: #2f3136;
+		color: #b9bbbe;
 	}
-
 	.discord-message-markup .discord-spoiler {
 		background-color: #72767d;
 	}
-
 	.discord-message-markup .discord-spoiler:hover {
-		background-color: rgba(114, 118, 125, 0.8);
+		background-color: #72767dcc;
 	}
-
 	.discord-message-markup .discord-spoiler:has(> :checked) {
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: #ffffff1a;
 	}
-
 	.discord-message-markup .discord-time,
-	.discord-message-markup code {
+	.discord-message-markup > code {
 		background-color: #ffffff0f;
 	}
-
 	.discord-message-markup .discord-mention {
-		background-color: hsla(235, 85.6%, 64.7%, 0.3);
+		background-color: #5966f24d;
 		color: #a3b7fa;
 	}
 }
