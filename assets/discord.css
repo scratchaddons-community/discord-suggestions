@@ -185,7 +185,7 @@
 	color: #687dc6;
 	font-weight: 500;
 }
-.discord-message-markup .discord-mention:hover {
+.discord-message-markup a.discord-mention:hover {
 	background-color: #5865f2;
 	color: #fff;
 }
