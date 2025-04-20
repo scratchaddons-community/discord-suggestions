@@ -81,6 +81,9 @@
 	white-space: pre-wrap;
 }
 
+.discord-message-markup .paragraph:not(:last-child) {
+	padding-bottom: 1em;
+}
 .discord-message-markup a {
 	color: #00b0f4;
 	font-weight: normal;
