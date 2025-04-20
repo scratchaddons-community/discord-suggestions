@@ -76,7 +76,7 @@ reverse %}
 				class="discord-custom-emoji"
 			/>
 			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
-				>{{ suggestion.title }}</a
+				>{{ suggestion.title | escape }}</a
 			>
 		</li>
 		{% endfor %}
