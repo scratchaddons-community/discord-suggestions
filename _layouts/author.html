@@ -4,6 +4,8 @@ layout: default
 
 {% assign suggestions = site.suggestions | where: "author.id", page.id | sort: "votes.count" |
 reverse %}
+<!--  -->
+{% assign rejected = "Implemented,Incompatible,Impractical,Rejected,Impossible" | split: "," %}
 
 <div class="author-info">
 	<div class="username">
@@ -67,7 +69,7 @@ reverse %}
 </div>
 <div class="discord-message discord-message-inner discord-message-content discord-message-body">
 	<ol>
-		{% for suggestion in suggestions %}
+		{% for suggestion in suggestions %} {% unless rejected contains suggestion.answer %}
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
@@ -79,6 +81,6 @@ reverse %}
 				>{{ suggestion.title | escape }}</a
 			>
 		</li>
-		{% endfor %}
+		{% endunless %} {% endfor %}
 	</ol>
 </div>
