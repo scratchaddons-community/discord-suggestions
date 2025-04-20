@@ -194,36 +194,14 @@
 }
 
 .discord-attachments {
-	display: grid;
-	grid-auto-flow: row;
-	grid-row-gap: 0.25rem;
-	position: relative;
-	padding-top: 0.125rem;
-	padding-bottom: 0.125rem;
-	min-width: 0;
-	min-height: 0;
-	text-indent: 0;
+	padding: 2px 0;
 }
 .discord-attachment {
-	display: flex;
-	align-self: start;
-	justify-self: start;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	font-size: 0.9em;
-	line-height: 150%;
-}
-.discord-attachment .discord-image-wrapper {
-	display: block;
-	position: relative;
-	border-radius: 3px;
-	overflow: hidden;
-	user-select: text;
+	margin: 8px 0;
 }
 .discord-attachment .discord-image-wrapper img,
 .discord-attachment .discord-image-wrapper video {
 	max-width: min(100%, 500px);
-	height: auto;
 }
 
 @media (prefers-color-scheme: dark) {
