@@ -50,7 +50,7 @@
 	font-weight: 500;
 	font-size: 1em;
 }
-.discord-message .discord-author-info:hover .discord-author-username {
+.discord-message a.discord-author-info:hover .discord-author-username {
 	text-decoration: underline currentColor;
 }
 .discord-message .discord-author-info .discord-application-tag {
