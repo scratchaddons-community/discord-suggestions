@@ -46,6 +46,9 @@ nav {
 	height: 3rem;
 }
 
+h1 {
+	overflow-wrap: anywhere;
+}
 nav a,
 h1 a {
 	color: inherit;
@@ -88,9 +91,6 @@ h1 a:hover {
 .author-info .username {
 	display: flex;
 	align-items: center;
-}
-.author-info h1 {
-	overflow-wrap: anywhere;
 }
 .author-info .avatar {
 	margin-right: 10px;
