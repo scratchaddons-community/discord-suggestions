@@ -1,5 +1,4 @@
 .discord-message {
-	margin-top: 1.0625rem;
 	color: #2e3338;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -14,6 +13,7 @@
 }
 .discord-message .discord-message-inner {
 	display: flex;
+	margin-top: 1.0625rem;
 	border-radius: 10px;
 	padding: 0 1em;
 }
@@ -81,7 +81,8 @@
 	white-space: pre-wrap;
 }
 
-.discord-message-markup .paragraph:not(:last-child) {
+.discord-message-markup .paragraph:not(:last-child),
+details.discord-message-markup .paragraph {
 	padding-bottom: 1em;
 }
 .discord-message-markup a {
