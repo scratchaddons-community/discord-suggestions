@@ -68,8 +68,8 @@ pagination:
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
-				src="{{ suggestion.votes.emoji.url }}"
-				alt="{{ suggestion.votes.emoji.name }}"
+				src="{{ emojis[suggestion.votes.emoji] }}"
+				alt="{{ suggestion.votes.emoji }}"
 				class="discord-custom-emoji"
 			/>
 			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
