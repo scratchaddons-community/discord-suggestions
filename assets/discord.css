@@ -135,7 +135,6 @@ details.discord-message-markup .paragraph {
 	font-family:
 		Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
 		Monaco, "Courier New", Courier, monospace;
-	white-space: break-spaces;
 }
 .discord-message-markup code::selection {
 	background-color: #53585b;
