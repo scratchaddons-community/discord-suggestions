@@ -2,7 +2,6 @@ title: Scratch Addons Suggestions
 description: Suggestions for Scratch Addons taken from the old community Discord server
 baseurl: "/suggestions"
 url: "https://scratchaddons-community.github.io"
-twemoji_root: https://cdn.jsdelivr.net/npm/@discordapp/twemoji@15.1.0
 
 plugins:
     - jekyll-paginate-v2
