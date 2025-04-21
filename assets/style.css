@@ -71,7 +71,8 @@ h1 a:hover {
 	font-weight: 600;
 	font-size: 14px;
 }
-.chip.selected {
+.chip.selected,
+a.chip:hover {
 	border-color: #5865f2;
 	background-color: #e7e9fd;
 }
@@ -136,7 +137,8 @@ path.github {
 		background-color: #2e3238;
 		color: #dcddde;
 	}
-	.chip.selected {
+	.chip.selected,
+	a.chip:hover {
 		border-color: #727efb;
 		background-color: #313363;
 	}
