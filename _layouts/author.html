@@ -8,7 +8,7 @@ reverse %}
 {% assign rejected = "Implemented,Incompatible,Impractical,Rejected,Impossible" | split: "," %}
 
 <div class="author-info">
-	<img class="avatar" src="{{ page.avatar }}" alt="{{ page.discord }}" />
+	<img class="avatar" src="{{ page.avatar | relative_url }}" alt="{{ page.discord }}" />
 	<h1>{{ page.title }}</h1>
 	<div class="socials">
 		{% if page.github != "" %}
@@ -71,7 +71,7 @@ reverse %}
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
-				src="{{ emojis[suggestion.votes.emoji] }}"
+				src="{{ site.data.emojis[suggestion.votes.emoji] }}"
 				alt="{{ suggestion.votes.emoji }}"
 				class="discord-custom-emoji"
 			/>

@@ -5,7 +5,7 @@
 	"homepage": "https://discord.gg/FPv957V6SD",
 	"scripts": {
 		"build": "bundle exec jekyll build",
-		"format": "prettier --write \"**\" \"!./{_suggestions,author}\" --ignore-unknown --cache",
+		"format": "prettier --write \"**\" \"!./{_suggestions,author,assets/archive}\" --ignore-unknown --cache",
 		"serve": "bundle exec jekyll serve"
 	},
 	"browserslist": [
