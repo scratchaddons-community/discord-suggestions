@@ -22,7 +22,8 @@ a {
 	color: var(--theme-color);
 	text-decoration: none;
 }
-a:hover {
+a:hover,
+summary:hover {
 	text-decoration: solid;
 }
 
@@ -56,6 +57,21 @@ h1 a {
 h1 a:hover {
 	color: var(--theme-color);
 	text-decoration: none;
+}
+
+details summary .open,
+details[open] summary .closed {
+	display: none;
+}
+details[open] summary .open {
+	display: inline;
+}
+details summary span {
+	cursor: pointer;
+	color: #00b0f4;
+}
+details summary:hover span {
+	text-decoration: underline;
 }
 
 .chip {
