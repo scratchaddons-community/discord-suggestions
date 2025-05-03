@@ -10,25 +10,25 @@ layout: default
 	</a>
 </h1>
 <a
+	class="chip selected"
 	href="https://github.com/sa-community/suggestions-archive/edit/main/_suggestions{{ page.id }}.html#L2C8-L2"
 	target="_blank"
 	rel="noreferrer"
-	class="chip selected"
 	title="{{ answer.description }}"
 >
 	<img
+		class="chip-emoji"
 		src="{{ answer.emoji.url }}"
 		alt="{{ answer.emoji.name }}"
-		class="chip-emoji"
 		draggable="false"
 	/>
 	{{ page.answer }}
 </a>
 <div class="chip">
 	<img
+		class="chip-emoji"
 		src="{{ site.data.emojis[page.votes.emoji] }}"
 		alt="{{ page.votes.emoji }}"
-		class="chip-emoji"
 		draggable="false"
 	/>
 	{{ page.votes.count }}

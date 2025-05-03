@@ -47,12 +47,12 @@ pagination:
 					Suggestions from both the newer suggestions form channel and the
 					pre-October-2022 bot-managed channel were ported. Form suggestions have the
 					<img
+						class="discord-custom-emoji"
 						src="{{ site.data.emojis[':potato_upvote:'] }}"
 						alt=":potato_upvote:"
-						class="discord-custom-emoji"
 					/>
 					emoji, while legacy suggestions have the
-					<img src="{{ site.data.emojis['👍'] }}" alt="👍" class="discord-custom-emoji" />
+					<img class="discord-custom-emoji" src="{{ site.data.emojis['👍'] }}" alt="👍" />
 					emoji.
 				</li>
 				<li>
@@ -90,15 +90,15 @@ pagination:
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
+				class="discord-custom-emoji"
 				src="{{ site.data.emojis[suggestion.votes.emoji] }}"
 				alt="{{ suggestion.votes.emoji }}"
-				class="discord-custom-emoji"
 			/>
 			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
 				>{{ suggestion.title | escape }}</a
 			>
 			by
-			<a href="{{ site.baseurl }}/author/{{ suggestion.author.id }}" class="discord-mention"
+			<a class="discord-mention" href="{{ site.baseurl }}/author/{{ suggestion.author.id }}"
 				>@{{ suggestion.author.name }}</a
 			>
 		</li>
@@ -111,13 +111,13 @@ pagination:
 	<span class="discord-message-markup">
 		{% if paginator.previous_page %}
 		<a
-			href="{{ paginator.previous_page_path | relative_url | replace: '/page1', '' }}"
 			class="chip"
+			href="{{ paginator.previous_page_path | relative_url | replace: '/page1', '' }}"
 		>
 			Previous page
 		</a>
 		{% endif %} {% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path | relative_url }}" class="chip">Next page</a>
+		<a class="chip" href="{{ paginator.next_page_path | relative_url }}">Next page</a>
 		{% endif %}
 	</span>
 </div>

@@ -71,9 +71,9 @@ reverse %}
 		<li class="discord-message-markup">
 			<strong>{{ suggestion.votes.count }}</strong>
 			<img
+				class="discord-custom-emoji"
 				src="{{ site.data.emojis[suggestion.votes.emoji] }}"
 				alt="{{ suggestion.votes.emoji }}"
-				class="discord-custom-emoji"
 			/>
 			<a href="{{ suggestion.url | relative_url }}" title="{{ suggestion.answer }}"
 				>{{ suggestion.title | escape }}</a
